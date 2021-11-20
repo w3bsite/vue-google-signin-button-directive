@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 export default Vue.directive('google-signin-button', {
-  bind: function (el, binding, vnode) {
+  beforeMount(el, binding, vnode,prevVnode) {
     CheckComponentMethods()
     let clientId = binding.value
     let googleSignInAPI = document.createElement('script')
